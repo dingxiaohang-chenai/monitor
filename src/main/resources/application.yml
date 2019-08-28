@@ -1,0 +1,62 @@
+#######################################
+#####            http            #####
+######################################
+server:
+  address: 0.0.0.0
+  port: 9090
+#######################################
+#####           consul           #####
+######################################
+spring:
+  application:
+    name: service-monitor
+  cloud:
+    consul:
+      discovery:
+        health-check-url:  http://${spring.cloud.client.ip-address}:${server.port}/actuator/health
+        health-check-critical-timeout: 60s
+        health-check-interval: 10s
+        prefer-ip-address: true
+      host: 192.168.0.200
+      port: 8500
+    loadbalancer:
+      retry:
+        enabled: true
+#######################################
+#####            监控            #####
+######################################
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+#######################################
+#####           aliyun           #####
+######################################
+aliyun:
+  key: LTAIKBbVBFFVCdAk
+  secret: BXKk1JgMk4eGu7pYahgIZihhq6igaY
+  sms-signature: GETU
+  sms-templates:
+    zh: SMS_152855115
+    en: SMS_152850168
+  email:
+    from: noreply@mail.getu.pk
+    alias: noreply
+    tag: GETU
+twilio:
+  key: AC1e7be3e30cdb16a932e14cf4016f688a
+  secret: 595af8b3a7d8d39d994d118304b06915
+  from: +12562914814
+#######################################
+#####            para            #####
+######################################
+# service.para: service-monitor
+service.para: getu-gateway
+send:
+  email: 1062073360@qq.com
+  region: 86
+  mobile: 18337723895
