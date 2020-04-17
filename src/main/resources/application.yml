@@ -37,26 +37,26 @@ management:
 #####           aliyun           #####
 ######################################
 aliyun:
-  key: LTAIKBbVBFFVCdAk
-  secret: BXKk1JgMk4eGu7pYahgIZihhq6igaY
-  sms-signature: GETU
+  key: 123*123
+  secret: 123*123
+  sms-signature: 123
   sms-templates:
-    zh: SMS_152855115
-    en: SMS_152850168
+    zh: 123*123
+    en: 123*123
   email:
-    from: noreply@mail.getu.pk
-    alias: noreply
-    tag: GETU
+    from: 123*123
+    alias: 123*123
+    tag:123*123
 twilio:
-  key: AC1e7be3e30cdb16a932e14cf4016f688a
-  secret: 595af8b3a7d8d39d994d118304b06915
-  from: +12562914814
+  key: 123456
+  secret: 123456
+  from: 123*123
 #######################################
 #####            para            #####
 ######################################
 # service.para: service-monitor
 service.para: getu-gateway
 send:
-  email: 1062073360@qq.com
+  email: 106***3360@qq.com
   region: 86
-  mobile: 18337723895
+  mobile: ********
